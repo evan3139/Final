@@ -14,6 +14,17 @@ frequency::frequency(const std::vector<int> &f)
     frequencies = f;
 }
 
+void frequency::printFreq()
+{
+    std::cout<< frequencies[0];
+    for(size_t i = 1; i < frequencies.size(); i++)
+    {
+        std::cout << " ";
+        std::cout << frequencies[i];
+    }
+    std::cout << '\n';
+}
+
 std::vector<int> frequency::freqValue(std::ifstream &infile)
 {
     //A vector with the length of 26^3 is created.
@@ -45,15 +56,4 @@ std::vector<int> frequency::freqValue(std::ifstream &infile)
     }
     freqs[result] += 1; 
     return freqs;
-}
-
-void frequency::printFreq()
-{
-    std::cout<< frequencies[0];
-    for(size_t i = 1; i < frequencies.size(); i++)
-    {
-        std::cout << " ";
-        std::cout << frequencies[i];
-    }
-    std::cout << '\n';
 }
