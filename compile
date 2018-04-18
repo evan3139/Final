@@ -3,8 +3,8 @@
 # Variables:
 compiler=clang++
 FLAGS="-pedantic -Wall -Wextra -Wredundant-decls -Wundef -Werror -Wfatal-errors"
-INPUTS="main.cpp functions.cpp bigint/bigint.cpp"
-output=frequencies
+INPUTS="main.cpp functions.cpp bigint/bigint.cpp language.cpp"
+output=language
 
 # Halt on first error
 set -e

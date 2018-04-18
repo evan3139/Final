@@ -14,6 +14,19 @@ frequency::frequency(const std::vector<int> &f)
     frequencies = f;
 }
 
+//Gets the size of a frequency vector
+size_t frequency::getSize(){
+  return frequencies.size();
+
+}
+
+//Allows the use of index when referencing a frequency vector
+int frequency::operator[](size_t index) const {
+  return frequencies[index];
+
+}
+
+
 void frequency::printFreq()
 {
     std::cout<< frequencies[0];

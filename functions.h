@@ -21,6 +21,8 @@ public:
    frequency(const std::vector<int> &f);
    void printFreq();
    std::vector<int> freqValue(std::ifstream &infile);
+   size_t getSize();
+   int operator[](size_t idx) const;
 
 };
 
