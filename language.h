@@ -10,7 +10,7 @@ private:
     bigint similarity;
 
 public:
-    bigint compare(frequency &train, frequency &test);
+    double compare(frequency &train, frequency &test);
 
 };
 
