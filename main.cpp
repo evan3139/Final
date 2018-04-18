@@ -18,14 +18,29 @@ int main(int argc, char *argv[])
         //This loop will run the frequency value function for every file that si input into the command line.
         for(int r = 1; r < argc; r++)
         {
-            std::ifstream infile;
-            infile.open(argv[r]);
-            frequency i;
-            i = i.freqValue(infile);
-            i.printFreq();
-            storage.push_back(i);
+			if(argv[r] == "test"){
+				std::ifstream infile;
+				infile.open(argv[r+1]);
+				frequency i;
+				i = i.freqValue(infile);
+				storage.push_back(i);
+				break;
+			}
+			std::ifstream infile;
+			infile.open(argv[r]);
+			frequency i;
+			i = i.freqValue(infile);
+			storage.push_back(i);
         }
+		
+		for(int r = 1; r < argc - 1; r++)
+		{
+			double result = 
+			double largest = 
+			
+		
         return 0;
     }
+	
 }
 
