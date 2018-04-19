@@ -26,18 +26,6 @@ int frequency::operator[](size_t index) const {
 
 }
 
-
-void frequency::printFreq()
-{
-    std::cout<< frequencies[0];
-    for(size_t i = 1; i < frequencies.size(); i++)
-    {
-        std::cout << " ";
-        std::cout << frequencies[i];
-    }
-    std::cout << '\n';
-}
-
 std::vector<int> frequency::freqValue(std::ifstream &infile)
 {
     //A vector with the length of 26^3 is created.
