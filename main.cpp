@@ -6,10 +6,6 @@
 #include "functions.h"
 #include "bigint/bigint.h"
 #include "language.h"
-#include <string>
-
-
-
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +13,7 @@ int main(int argc, char *argv[])
     std::vector<frequency> storage;
 	std::string test = "test";
 	double largest = 0;
-	int ctr = 0;
+	int counter = 0;
     if(argc > 0)
     {
         //This loop will run the frequency value function for every file that si input into the command line.
@@ -43,10 +39,10 @@ int main(int argc, char *argv[])
 			double result = cosSimilarity.compare(storage[r], storage[storage.size() - 1]);			
 			if (result > largest){
 				largest = result;
-				ctr = r;
+				counter = r;
 			}
 		}
-		std::cout << "Lol the language is probz like:\t" << argv[ctr + 1] << std::endl;
+		std::cout << "The language is: " << argv[counter + 1] << std::endl;
         return 0;
     }
 	

@@ -1,7 +1,6 @@
 #include "language.h"
 #include "bigint/bigint.h"
 #include <cmath>
-#include <string>
 
 double similarity::compare(frequency &train, frequency &test)
 {
@@ -22,6 +21,6 @@ double similarity::compare(frequency &train, frequency &test)
 	total = std::stod(number);
 	total /= (float) 1000000;
 	total = sqrt(total);
-	
+
 	return total;	
 }
