@@ -13,7 +13,7 @@ double similarity::compare(frequency &train, frequency &test)
 	
     for(size_t i = 0; i < train.getSize() -1; i++)
     {
-        numerator += train[i] + test[i];
+        numerator += train[i]*test[i];
     }
 
 	for(size_t i = 0; i < train.getSize() - 1; i++)
@@ -40,15 +40,14 @@ double similarity::compare(frequency &train, frequency &test)
 	
 	//number = result.to_string();
 	//double total = std::stod(number);
-	
 	numerator = numerator.fast_pow(2);
-	numerator *= (unsigned long long)1000000000000;
+	numerator *= 1000000;
 	
 	result = numerator / (freqA * freqB);
 	
 	number = result.to_string();
 	double newNum = std::stod(number);
-	newNum /= (unsigned long long)1000000000000;
+	newNum /= (float) 1000000;
 	newNum = sqrt(newNum);
 	std::cout << newNum << std::endl;
 	

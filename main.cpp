@@ -40,8 +40,7 @@ int main(int argc, char *argv[])
 		{
 	
 			similarity cosSimilarity;
-			double result = cosSimilarity.compare(storage[r], storage[storage.size() - 1]);
-			
+			double result = cosSimilarity.compare(storage[r], storage[storage.size() - 1]);			
 			if (result > largest){
 				largest = result;
 				ctr = r;
