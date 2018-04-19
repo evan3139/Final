@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	//This for loop will grab the frequency of each file compare it then delete it and repeate with every file
 	//Making note of which file has the largest COSSimilarity everytime it runs and storing it.
-	for(int r = 1; r < argc - 2; r++)
+	for(int r = 1; r < argc - 1; r++)
 	{
 		std::ifstream infile;
 		infile.open(argv[r]);
