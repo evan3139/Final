@@ -3,7 +3,7 @@
 #include <cmath>
 #include <string>
 
-double similiarity::compare(frequency &train, frequency &test)
+double similarity::compare(frequency &train, frequency &test)
 {
     bigint numerator;
 	bigint freqA;
@@ -22,11 +22,36 @@ double similiarity::compare(frequency &train, frequency &test)
 		freqB += pow(test[i], 2);
 	}
 	
-	numerator *= 1000000;
+	/*std::string num = numerator.to_string();
+	std::string A = freqA.to_string();
+	std::string B = freqB.to_string();*/
+	
+	/*double denomA = std::stod(A);
+	double denomB = std::stod(B);
+	double newNumerator = std::stod(num);*/
+	
+	//denomA = sqrt(denomA);
+	//denomB = sqrt(denomB);
+	
+	/*double newDen = denomA * denomB;
+	newNumerator *= 1000000;
+	
+	result = newNumerator / (newDen);*/
+	
+	//number = result.to_string();
+	//double total = std::stod(number);
+	
+	numerator = numerator.fast_pow(2);
+	numerator *= (unsigned long long)1000000000000;
+	
 	result = numerator / (freqA * freqB);
-	result /= 1000000;
+	
 	number = result.to_string();
-	double total = std::stod (number);
-	total = sqrt(total);
-	return total;	
+	double newNum = std::stod(number);
+	newNum /= (unsigned long long)1000000000000;
+	newNum = sqrt(newNum);
+	std::cout << newNum << std::endl;
+	
+	
+	return newNum;	
 }

@@ -4,7 +4,7 @@
 #include "bigint/bigint.h"
 #include"functions.h"
 
-class similiarity
+class similarity
 {
 private:
     bigint similarity;
