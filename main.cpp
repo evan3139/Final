@@ -5,6 +5,7 @@
 
 #include "functions.h"
 #include "bigint/bigint.h"
+#include "language.h"
 
 
 
@@ -33,9 +34,9 @@ int main(int argc, char *argv[])
 			storage.push_back(i);
         }
 		
-		for(int r = 1; r < argc - 1; r++)
+		for(int r = 0; r < argc - 2; r++)
 		{
-			double result = 
+			double result = compare(storage[r], storage[argc - 2]);
 			double largest = 
 			
 		
