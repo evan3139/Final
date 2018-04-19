@@ -6,12 +6,8 @@
 
 class similarity
 {
-private:
-    bigint similarity;
-
 public:
     double compare(frequency &train, frequency &test);
-
 };
 
 
