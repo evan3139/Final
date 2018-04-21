@@ -15,15 +15,15 @@ frequency::frequency(const std::vector<int> &f)
 }
 
 //Gets the size of a frequency vector
-size_t frequency::getSize(){
+size_t frequency::getSize()
+{
   return frequencies.size();
-
 }
 
 //Allows the use of index when referencing a frequency vector
-int frequency::operator[](size_t index) const {
+int frequency::operator[](size_t index) const 
+{
   return frequencies[index];
-
 }
 
 std::vector<int> frequency::freqValue(std::ifstream &infile)
