@@ -5,16 +5,14 @@
 double similarity::compare(frequency &train, frequency &test)
 {
 	//Initializing the denominators and the numerator and result
-	bigint freqA, freqB, result, numerator, a , b;
+	bigint freqA, freqB, result, numerator;
 	std::string number;
 	double total;
 	
 	//For loop sets the numerator and the denominators
 	for(size_t i = 0; i < train.getSize() - 1; i++)
 	{
-		a = train[i];
-		b = test[i];
-		numerator += a*b;
+		numerator += (bigint)train[i] * (bigint)test[i];
 		freqA += pow(train[i], 2);
 		freqB += pow(test[i], 2);
 	}
