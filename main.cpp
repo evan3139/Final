@@ -10,7 +10,6 @@
 int main(int argc, char *argv[])
 {
     //Starts a vector that will hold frequencies in seperate indexes for each file
-	std::string test = "test";
 	double largest = 0;
 	int counter = 0;
 	//This will get the frequency for the test file before anything else
