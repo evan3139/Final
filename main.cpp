@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 			counter = r - 1;
 		}
 	}
-	std::cout << "The language is: " << argv[counter + 1] << std::endl;
+	//print name of the most likely matched language to console window.
+	std::cout << argv[counter + 1] << std::endl;
 	return 0;
 }
